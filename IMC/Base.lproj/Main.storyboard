@@ -1,115 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25408" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
-    <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25407"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-    </dependencies>
-    <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IMC" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuR-Rn-qMF" userLabel="Content View">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Altura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9G-KQ-BJg">
-                                        <rect key="frame" x="11" y="8" width="46" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Peso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnr-u8-RvY">
-                                        <rect key="frame" x="11" y="119" width="46" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="160" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UG9-CM-Jed">
-                                        <rect key="frame" x="139" y="8" width="105" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="160" minValue="40" maxValue="230" translatesAutoresizingMaskIntoConstraints="NO" id="Q25-J4-Nbz">
-                                        <rect key="frame" x="11" y="63" width="361" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="heigthChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="MB2-s2-T0Y"/>
-                                        </connections>
-                                    </slider>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minimumValue="30" maximumValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="PSE-dk-nCx">
-                                        <rect key="frame" x="287" y="114" width="94" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="weigthChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hi5-Np-gHx"/>
-                                        </connections>
-                                    </stepper>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nf-yH-ERw">
-                                        <rect key="frame" x="128" y="351" width="141" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Calcular IMC">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                                            <color key="baseBackgroundColor" systemColor="systemMintColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="calcuateBMI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Am9-11-dD2"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkw-hO-mxZ">
-                                        <rect key="frame" x="147" y="118" width="88" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKY-NY-o6B">
-                                        <rect key="frame" x="119" y="253" width="155" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PuR-Rn-qMF" secondAttribute="trailing" id="3hK-9A-c8h"/>
-                            <constraint firstItem="PuR-Rn-qMF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LVD-JJ-WMm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PuR-Rn-qMF" secondAttribute="bottom" id="UAK-EA-t0a"/>
-                            <constraint firstItem="PuR-Rn-qMF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b35-0m-1Ys"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="heigthLabel" destination="UG9-CM-Jed" id="g1Y-WU-04D"/>
-                        <outlet property="resultLabel" destination="fKY-NY-o6B" id="3FN-x6-9oL"/>
-                        <outlet property="weigthLabel" destination="gkw-hO-mxZ" id="Ivy-DR-vag"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="138.1679389312977" y="130.98591549295776"/>
-        </scene>
-    </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7843137255" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
+<device id="retina6_12" orientation="portrait" appearance="light"/>
+<dependencies>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25407"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="System colors in document resources" minToolsVersion="11.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<!--View Controller-->
+<scene sceneID="tne-QT-ifu">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IMC" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+<rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCR-01-sc1">
+<rect key="frame" x="0.0" y="59" width="393" height="759"/>
+<subviews>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRP-01-vw1" userLabel="Content View">
+<rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="STK-01-mn1">
+<rect key="frame" x="20" y="24" width="353" height="560"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculadora IMC" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-01-ttl">
+<rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+<fontDescription key="fontDescription" style="UICTFontTextStyleLargeTitle"/>
+<color key="textColor" systemColor="labelColor"/>
+<nil key="highlightedColor"/>
+</label>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRD-01-hgt">
+<rect key="frame" x="0.0" y="0.0" width="353" height="100"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="STK-02-hgt">
+<rect key="frame" x="20" y="16" width="313" height="68"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALTURA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-02-hgt">
+<rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+<fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+<color key="textColor" systemColor="secondaryLabelColor"/>
+<nil key="highlightedColor"/>
+</label>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="169 cm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UG9-CM-Jed">
+<rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+<fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+<color key="textColor" systemColor="labelColor"/>
+<nil key="highlightedColor"/>
+</label>
+<slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="169" minValue="40" maxValue="230" translatesAutoresizingMaskIntoConstraints="NO" id="Q25-J4-Nbz">
+<rect key="frame" x="-2" y="40" width="317" height="30"/>
+<color key="minimumTrackTintColor" systemColor="systemMintColor"/>
+<accessibility key="accessibilityConfiguration" label="Altura"/>
+<connections>
+<action selector="heigthChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="MB2-s2-T0Y"/>
+</connections>
+</slider>
+</subviews>
+</stackView>
+</subviews>
+<color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+<constraints>
+<constraint firstItem="STK-02-hgt" firstAttribute="top" secondItem="CRD-01-hgt" secondAttribute="top" constant="16" id="Z01-IM-002"/>
+<constraint firstItem="CRD-01-hgt" firstAttribute="bottom" secondItem="STK-02-hgt" secondAttribute="bottom" constant="16" id="Z03-IM-004"/>
+<constraint firstItem="STK-02-hgt" firstAttribute="leading" secondItem="CRD-01-hgt" secondAttribute="leading" constant="20" id="Z05-IM-006"/>
+<constraint firstItem="CRD-01-hgt" firstAttribute="trailing" secondItem="STK-02-hgt" secondAttribute="trailing" constant="20" id="Z07-IM-008"/>
+</constraints>
+<userDefinedRuntimeAttributes>
+<userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+<integer key="value" value="20"/>
+</userDefinedRuntimeAttribute>
+</userDefinedRuntimeAttributes>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRD-03-wgt">
+<rect key="frame" x="0.0" y="0.0" width="353" height="100"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="STK-03-wgt">
+<rect key="frame" x="20" y="16" width="313" height="68"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PESO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-03-wgt">
+<rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+<fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+<color key="textColor" systemColor="secondaryLabelColor"/>
+<nil key="highlightedColor"/>
+</label>
+<stackView opaque="NO" contentMode="scaleToFill" spacing="12" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="STK-04-wrw">
+<rect key="frame" x="0.0" y="22" width="313" height="46"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70 kg" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkw-hO-mxZ">
+<rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+<fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+<color key="textColor" systemColor="labelColor"/>
+<nil key="highlightedColor"/>
+</label>
+<stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="70" minimumValue="30" maximumValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="PSE-dk-nCx">
+<rect key="frame" x="219" y="0.0" width="94" height="32"/>
+<accessibility key="accessibilityConfiguration" label="Peso"/>
+<connections>
+<action selector="weigthChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hi5-Np-gHx"/>
+</connections>
+</stepper>
+</subviews>
+</stackView>
+</subviews>
+</stackView>
+</subviews>
+<color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+<constraints>
+<constraint firstItem="STK-03-wgt" firstAttribute="top" secondItem="CRD-03-wgt" secondAttribute="top" constant="16" id="Z09-IM-010"/>
+<constraint firstItem="CRD-03-wgt" firstAttribute="bottom" secondItem="STK-03-wgt" secondAttribute="bottom" constant="16" id="Z11-IM-012"/>
+<constraint firstItem="STK-03-wgt" firstAttribute="leading" secondItem="CRD-03-wgt" secondAttribute="leading" constant="20" id="Z13-IM-014"/>
+<constraint firstItem="CRD-03-wgt" firstAttribute="trailing" secondItem="STK-03-wgt" secondAttribute="trailing" constant="20" id="Z15-IM-016"/>
+</constraints>
+<userDefinedRuntimeAttributes>
+<userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+<integer key="value" value="20"/>
+</userDefinedRuntimeAttribute>
+</userDefinedRuntimeAttributes>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RES">
+<rect key="frame" x="0.0" y="0.0" width="353" height="100"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="STK-05-res">
+<rect key="frame" x="20" y="16" width="313" height="68"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TU IMC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-04-res">
+<rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+<fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+<color key="textColor" systemColor="secondaryLabelColor"/>
+<nil key="highlightedColor"/>
+</label>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKY-NY-o6B">
+<rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+<fontDescription key="fontDescription" style="UICTFontTextStyleLargeTitle"/>
+<color key="textColor" systemColor="labelColor"/>
+<nil key="highlightedColor"/>
+</label>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulsa «Calcular IMC»" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nb-wi-zXA">
+<rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+<fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+<color key="textColor" systemColor="secondaryLabelColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView>
+</subviews>
+<color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+<constraints>
+<constraint firstItem="STK-05-res" firstAttribute="top" secondItem="RES" secondAttribute="top" constant="16" id="Z17-IM-018"/>
+<constraint firstItem="RES" firstAttribute="bottom" secondItem="STK-05-res" secondAttribute="bottom" constant="16" id="Z19-IM-020"/>
+<constraint firstItem="STK-05-res" firstAttribute="leading" secondItem="RES" secondAttribute="leading" constant="20" id="Z21-IM-022"/>
+<constraint firstItem="RES" firstAttribute="trailing" secondItem="STK-05-res" secondAttribute="trailing" constant="20" id="Z23-IM-024"/>
+</constraints>
+<userDefinedRuntimeAttributes>
+<userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+<integer key="value" value="20"/>
+</userDefinedRuntimeAttribute>
+</userDefinedRuntimeAttributes>
+</view>
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nf-yH-ERw">
+<rect key="frame" x="0.0" y="0.0" width="353" height="56"/>
+<state key="normal" title="Button"/>
+<buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" title="Calcular IMC" buttonSize="large">
+<fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+<color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<color key="baseBackgroundColor" systemColor="systemMintColor"/>
+</buttonConfiguration>
+<connections>
+<action selector="calcuateBMI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Am9-11-dD2"/>
+</connections>
+</button>
+</subviews>
+</stackView>
+</subviews>
+<constraints>
+<constraint firstItem="STK-01-mn1" firstAttribute="centerX" secondItem="WRP-01-vw1" secondAttribute="centerX" id="Z25-IM-026"/>
+<constraint firstItem="STK-01-mn1" firstAttribute="centerY" secondItem="WRP-01-vw1" secondAttribute="centerY" id="Z27-IM-028"/>
+<constraint firstItem="STK-01-mn1" firstAttribute="width" relation="lessThanOrEqual" constant="560" id="Z29-IM-030"/>
+<constraint firstItem="STK-01-mn1" firstAttribute="width" secondItem="WRP-01-vw1" secondAttribute="width" constant="-40" priority="750" id="Z31-IM-032"/>
+<constraint firstItem="WRP-01-vw1" firstAttribute="height" secondItem="STK-01-mn1" secondAttribute="height" relation="greaterThanOrEqual" constant="48" id="Z33-IM-034"/>
+</constraints>
+</view>
+</subviews>
+<constraints>
+<constraint firstItem="WRP-01-vw1" firstAttribute="top" secondItem="SCR-02-cg1" secondAttribute="top" id="Z35-IM-036"/>
+<constraint firstItem="WRP-01-vw1" firstAttribute="bottom" secondItem="SCR-02-cg1" secondAttribute="bottom" id="Z37-IM-038"/>
+<constraint firstItem="WRP-01-vw1" firstAttribute="leading" secondItem="SCR-02-cg1" secondAttribute="leading" id="Z39-IM-040"/>
+<constraint firstItem="WRP-01-vw1" firstAttribute="trailing" secondItem="SCR-02-cg1" secondAttribute="trailing" id="Z41-IM-042"/>
+<constraint firstItem="WRP-01-vw1" firstAttribute="width" secondItem="SCR-03-fg1" secondAttribute="width" id="Z43-IM-044"/>
+<constraint firstItem="WRP-01-vw1" firstAttribute="height" secondItem="SCR-03-fg1" secondAttribute="height" relation="greaterThanOrEqual" id="Z45-IM-046"/>
+<constraint firstItem="WRP-01-vw1" firstAttribute="height" secondItem="SCR-03-fg1" secondAttribute="height" priority="250" id="Z47-IM-048"/>
+</constraints>
+<viewLayoutGuide key="contentLayoutGuide" id="SCR-02-cg1"/>
+<viewLayoutGuide key="frameLayoutGuide" id="SCR-03-fg1"/>
+</scrollView>
+</subviews>
+<viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+<color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+<constraints>
+<constraint firstItem="SCR-01-sc1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Z49-IM-050"/>
+<constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SCR-01-sc1" secondAttribute="bottom" id="Z51-IM-052"/>
+<constraint firstItem="SCR-01-sc1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z53-IM-054"/>
+<constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SCR-01-sc1" secondAttribute="trailing" id="Z55-IM-056"/>
+</constraints>
+</view>
+<connections>
+<outlet property="heigthLabel" destination="UG9-CM-Jed" id="g1Y-WU-04D"/>
+<outlet property="resultDescriptionLabel" destination="0Nb-wi-zXA" id="nJo-Yc-tpP"/>
+<outlet property="resultLabel" destination="fKY-NY-o6B" id="3FN-x6-9oL"/>
+<outlet property="weigthLabel" destination="gkw-hO-mxZ" id="Ivy-DR-vag"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="138.1679389312977" y="130.98591549295776"/>
+</scene>
+</scenes>
+<resources>
+<systemColor name="labelColor">
+<color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</systemColor>
+<systemColor name="secondaryLabelColor">
+<color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+</systemColor>
+<systemColor name="secondarySystemGroupedBackgroundColor">
+<color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</systemColor>
+<systemColor name="systemGroupedBackgroundColor">
+<color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</systemColor>
+<systemColor name="systemMintColor">
+<color red="0.0" green="0.7843137255" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</systemColor>
+</resources>
 </document>
